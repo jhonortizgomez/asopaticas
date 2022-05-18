@@ -87,4 +87,11 @@ body {
     bottom: 0px;
     position: absolute;
     width: 100%;
+}
+
+.modal-content {
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
   }
+
