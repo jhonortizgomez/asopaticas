@@ -1,0 +1,10 @@
+{
+  "name": "asopaticas",
+  "version": "1.0.0",
+  "description": "Este es un proyecto para la fundación de animales asopaticas. ",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Jhon Ortiz",
+  "license": "ISC"
+}
