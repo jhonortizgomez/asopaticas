@@ -7,8 +7,6 @@
 body {
     overflow: scroll;
 }
-
-
 .container {
     display: grid;
     grid-template-columns: 100%;
@@ -25,14 +23,17 @@ body {
 .navbar__content {
     padding: 10px;
 }
+.navbar__content img {
+    width: 80px;
+  }
 
 .navbar__content ul li a {
     font-size: .9rem;
 }
 
 .main-content {
-    padding: 0;
-    margin: 10px 20px;
+    padding-left: 25px;
+    padding-right: 40px;
 }
 
 .main-content p:nth-child(3) {
@@ -48,18 +49,15 @@ body {
 .side-content {
     align-items: center;
     /* background: papayawhip; */
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-area: aside;
-    grid-template-rows: auto auto;
-    grid-template-columns: 100%;
 }
 
 .side-content img {
-    grid-column: 1 / 4;
-    grid-row: 2 / 2;
     max-width: 300px;
-    max-height: 300px;
-    margin-bottom: 0px;
+    max-height: 400px;
+    margin-bottom: 100px;
     padding: 0;
     display: block;
 }
@@ -74,7 +72,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-area: footer;
     position: absolute;
-    z-index: 100;
     margin-top: 30px;
 }
 
@@ -93,5 +90,14 @@ body {
     height: 60%;
     width: 80%;
     border-radius: 10px;
+}
+
+.modal, .modalDrog, .modalMoney{
+    height: 120%;
+    top: 520px;
+}
+
+.modalMoney p{
+    padding: 5px;
   }
 
