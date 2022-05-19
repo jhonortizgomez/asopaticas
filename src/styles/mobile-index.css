@@ -85,18 +85,14 @@ body {
     position: absolute;
     width: 100%;
 }
-
+.modal, .modalDrog, .modalMoney{
+    height: 210%;
+}
 .modal-content {
-    height: 60%;
-    width: 80%;
+    height: 350px;
+    min-width: 300px;
     border-radius: 10px;
 }
-
-.modal, .modalDrog, .modalMoney{
-    height: 120%;
-    top: 520px;
-}
-
 .modalMoney p{
     padding: 5px;
   }
