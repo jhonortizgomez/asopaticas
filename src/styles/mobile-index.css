@@ -4,13 +4,21 @@
     --yellow: #016fb9;
   }
 
-body {
+  body {
+    font-family: 'Lato', sans-serif;
+    height: auto;
+    margin: 0;
     overflow: scroll;
-}
+  }
+
+  .page {
+    height: auto;
+  }
+
 .container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: "nav"
                          "section"
                          "aside"
@@ -57,7 +65,7 @@ body {
 .side-content img {
     max-width: 300px;
     max-height: 400px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     padding: 0;
     display: block;
 }
@@ -66,18 +74,25 @@ body {
     transform:scale(1);
   }
 
-.footer {
-    background: var(--yellow);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-area: footer;
-    position: absolute;
-    margin-top: 30px;
-}
+  .footer {
+    border-radius: 50px 50px 0 0;
+    height: 100px;
+  }
+
+  .footer div {
+    background: var(--blue);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+    z-index: 3;
+  }
 
 .footer div:hover img {
     cursor: pointer;
-    transform: translateY(-20px) scale(1);
+    transform: translateY(-20px) scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
 .footer div img {
@@ -85,15 +100,51 @@ body {
     position: absolute;
     width: 100%;
 }
+.footer div:nth-child(1) {
+    bottom: 0px;
+    transform: translateY(200px);
+
+    animation-name: footer-child;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .footer div:nth-child(2) {
+    bottom: 0px;
+    transform: translateY(200px);
+
+    animation-name: footer-child;
+    animation-duration: 0.5s;
+    animation-delay: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .footer div:nth-child(3) {
+    transform: translateY(200px);
+
+    animation-name: footer-child;
+    animation-duration: 0.5s;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
 .modal, .modalDrog, .modalMoney{
-    height: 210%;
+    height: 100vh;
+    top: 350px;
 }
 .modal-content {
-    height: 350px;
-    min-width: 300px;
+    height: 400px;
+    min-width: 320px;
     border-radius: 10px;
 }
 .modalMoney p{
     padding: 5px;
-  }
+}
 
+.modal-content p{
+   width: 80%;
+}
